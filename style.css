@@ -1,0 +1,68 @@
+/* Основні стилі 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f4fa;
+  color: #333;
+}
+
+header {
+  background-color: #1f3b8c;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+header nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #1f3b8c;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+h1, h2 {
+  color: #1f3b8c;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 0.5rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: #1f3b8c;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+section img {
+  border-radius: 50%;
+  margin-top: 1rem;
+} */
+ 

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Навички | Анастасія Бабич</title>
+  <style>
+    :root {
+      --primary-color: #6c63ff;
+      --background-color: #f9f9f9;
+      --text-color: #333;
+      --accent-color: #ff6b6b;
+      --light-accent: #f0f0f0;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary-color), #8a84ff);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 1rem 0;
+      margin-top: 1rem;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1.5rem;
+      margin: 0 0.5rem;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+    
+    nav a:hover {
+      background-color: white;
+      color: var(--primary-color);
+    }
+    
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    
+    .section {
+      background-color: white;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 3px;
+      background-color: var(--accent-color);
+    }
+    
+    .intro {
+      margin-bottom: 2rem;
+    }
+    
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    
+    .skill-category {
+      background-color: var(--light-accent);
+      border-radius: 10px;
+      padding: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+    
+    .skill-category:hover {
+      transform: translateY(-5px);
+    }
+    
+    .skill-category h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .skill-item {
+      background: white;
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+    
+    .skill-bar-container {
+      margin-bottom: 1.5rem;
+    }
+    
+    .skill-name {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+    
+    .skill-level {
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+    
+    .skill-bar {
+      height: 10px;
+      background-color: var(--light-accent);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    
+    .skill-progress {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+      border-radius: 5px;
+    }
+    
+    .certificates {
+      margin-top: 2rem;
+    }
+    
+    .certificate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .certificate-card {
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+    
+    .certificate-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .certificate-image {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    
+    .certificate-content {
+      padding: 1.5rem;
+    }
+    
+    .certificate-title {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+    
+    .certificate-date {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    
+    .certificate-link {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background-color: var(--primary-color);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease;
+    }
+    
+    .certificate-link:hover {
+      background-color: #5952e0;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Анастасія Бабич</h1>
+    <p>Product Manager</p>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="about.html">Про мене</a>
+      <a href="skills.html" class="active">Навички</a>
+      <a href="projects.html">Проєкти</a>
+      <a href="contact.html">Контакти</a>
+    </nav>
+  </header>
+  
+  <main>
+    <div class="intro section">
+      <h2>Мої навички</h2>
+      <p>Я постійно розвиваюсь та вдосконалюю свої технічні та мовні навички. Нижче представлений перелік моїх професійних компетенцій, які я успішно застосовую в різних проєктах.</p>
+    </div>
+    
+    <section class="section">
+      <h2>Технічні навички</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Мови програмування</h3>
+          <div class="skill-list">
+            <span class="skill-item">HTML</span>
+            <span class="skill-item">CSS</span>
+            <span class="skill-item">PHP</span>
+            <span class="skill-item">JavaScript</span>
+            <span class="skill-item">C++</span>
+            <span class="skill-item">C#</span>
+            <span class="skill-item">Python</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Фреймворки та бібліотеки</h3>
+          <div class="skill-list">
+            <span class="skill-item">jQuery</span>
+            <span class="skill-item">Bootstrap</span>
+            <span class="skill-item">React (основи)</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Інструменти розробки</h3>
+          <div class="skill-list">
+            <span class="skill-item">Git</span>
+            <span class="skill-item">GitHub</span>
+            <span class="skill-item">VS Code</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Веб-розробка</h3>
+          <div class="skill-list">
+            <span class="skill-item">Front-end розробка</span>
+            <span class="skill-item">Адаптивний дизайн</span>
+            <span class="skill-item">Веб-верстка</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2>Рівень володіння мовами програмування</h2>
+      
+      <div class="skill-bar-container">
+        <div class="skill-name">
+          <span>HTML/CSS</span>
+          <span class="skill-level">90%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 90%"></div>
+        </div>
+      </div>
+      
+      <div class="skill-bar-container">
+        <div class="skill-name">
+          <span>JavaScript</span>
+          <span class="skill-level">75%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 75%"></div>
+        </div>
+      </div>
+      
+      <div class="skill-bar-container">
+        <div class="skill-name">
+          <span>PHP</span>
+          <span class="skill-level">70%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 70%"></div>
+        </div>
+      </div>
+      
+      <div class="skill-bar-container">
+        <div class="skill-name">
+          <span>C++</span>
+          <span class="skill-level">65%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 65%"></div>
+        </div>
+      </div>
+      
+      <div class="skill-bar-container">
+        <div class="skill-name">
+          <span>C#</span>
+          <span class="skill-level">60%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 60%"></div>
+        </div>
+      </div>
+      
+      <div class="skill-bar-container">
+        <div class="skill-name">
+          <span>Python</span>
+          <span class="skill-level">50%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 50%"></div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2>Мовні навички</h2>
+      <div class="skill-bar-container">
+        <div class="skill-name">
+          <span>Українська (рідна)</span>
+          <span class="skill-level">100%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 100%"></div>
+        </div>
+      </div>
+      
+      <div class="skill-bar-container">
+        <div class="skill-name">
+          <span>Англійська (C1)</span>
+          <span class="skill-level">90%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 90%"></div>
+        </div>
+      </div>
+      
+      <div class="skill-bar-container">
+        <div class="skill-name">
+          <span>Польська (B2)</span>
+          <span class="skill-level">80%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 80%"></div>
+        </div>
+      </div>
+      
+      <div class="skill-bar-container">
+        <div class="skill-name">
+          <span>Німецька (B1)</span>
+          <span class="skill-level">65%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 65%"></div>
+        </div>
+      </div>
+      
+      <div class="skill-bar-container">
+        <div class="skill-name">
+          <span>Китайська (A2)</span>
+          <span class="skill-level">40%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" style="width: 40%"></div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2>Додаткові навички</h2>
+      <div class="skills-container">
+        <div class="skill-category">
+          <h3>Комунікаційні навички</h3>
+          <div class="skill-list">
+            <span class="skill-item">Письмовий переклад</span>
+            <span class="skill-item">Усний переклад</span>
+            <span class="skill-item">Публічні виступи</span>
+            <span class="skill-item">Командна робота</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>SMM і контент</h3>
+          <div class="skill-list">
+            <span class="skill-item">Ведення соціальних мереж</span>
+            <span class="skill-item">Створення контенту</span>
+            <span class="skill-item">Копірайтинг</span>
+            <span class="skill-item">Відеовиробництво</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Адміністративні навички</h3>
+          <div class="skill-list">
+            <span class="skill-item">Організація заходів</span>
+            <span class="skill-item">Управління документацією</span>
+            <span class="skill-item">Координація проєктів</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Особисті якості</h3>
+          <div class="skill-list">
+            <span class="skill-item">Швидка адаптація</span>
+            <span class="skill-item">Багатозадачність</span>
+            <span class="skill-item">Творчий підхід</span>
+            <span class="skill-item">Орієнтація на результат</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Про мене | Анастасія Бабич</title>
+  <style>
+    :root {
+      --primary-color: #6c63ff;
+      --background-color: #f9f9f9;
+      --text-color: #333;
+      --accent-color: #ff6b6b;
+      --light-accent: #f0f0f0;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--primary-color), #8a84ff);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 1rem 0;
+      margin-top: 1rem;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1.5rem;
+      margin: 0 0.5rem;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+    
+    nav a:hover {
+      background-color: white;
+      color: var(--primary-color);
+    }
+    
+    main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    
+    .profile-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    @media (min-width: 768px) {
+      .profile-section {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+    
+    .profile-image {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .profile-content {
+      flex: 1;
+    }
+    
+    h2 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 3px;
+      background-color: var(--accent-color);
+    }
+    
+    .bio p {
+      margin-bottom: 1rem;
+    }
+    
+    .section {
+      background-color: white;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    .experience-item, .education-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--light-accent);
+    }
+    
+    .experience-item:last-child, .education-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+    
+    .item-title {
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+    
+    .item-date {
+      color: #888;
+    }
+    
+    .languages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .language {
+      background-color: var(--light-accent);
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .language-level {
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+    
+    .hobbies {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .hobby {
+      text-align: center;
+      width: calc(50% - 0.75rem);
+    }
+    
+    @media (min-width: 768px) {
+      .hobby {
+        width: calc(25% - 1.125rem);
+      }
+    }
+    
+    .hobby-icon {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Анастасія Бабич</h1>
+    <p>Product Manager</p>
+    <nav>
+      <a href="index.html">Головна</a>
+      <a href="about.html" class="active">Про мене</a>
+      <a href="skills.html">Навички</a>
+      <a href="projects.html">Проєкти</a>
+      <a href="contact.html">Контакти</a>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="profile-section">
+      <img src="me.jpg" alt="Анастасія Бабич" class="profile-image">
+      <div class="profile-content">
+        <h2>Про мене</h2>
+        <div class="bio">
+          <p>Мотивована та організована спеціалістка з досвідом у програмуванні (PHP, JavaScript, C++, C#), адміністративній роботі, перекладі з іноземних мов і просуванні соціальних мереж.</p>
+          <p>Успішно поєдную технічні та комунікаційні навички для вирішення комплексних завдань. Вільно володію англійською, німецькою, польською та китайською мовами, що дозволяє працювати в міжнародних проєктах.</p>
+          <p>Прагну розвитку в ІТ-сфері, швидко адаптуюсь до нових викликів і завжди націлена на результат.</p>
+          <p>Я є студенткою 2 курсу факультету інформаційних технологій в КНУТД. Я є старостою групи БІТ-1-23, головою інформаційної структури на факультеті та студкуратором.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2>Досвід роботи</h2>
+      <div class="experience-item">
+        <div class="item-header">
+          <span class="item-title">Лаборант на кафедрі в КНУТД, кафедра Комп'ютерних наук</span>
+          <span class="item-date">2024</span>
+        </div>
+        <ul>
+          <li>Виконувала обробку заяв для абітурієнтів.</li>
+          <li>Оформлювала документи з юридичних питань.</li>
+          <li>Переклад документації на англійську мову.</li>
+          <li>Відновлення документів.</li>
+        </ul>
+      </div>
+      
+      <div class="experience-item">
+        <div class="item-header">
+          <span class="item-title">Перекладач в Чистий світ</span>
+          <span class="item-date">2023 - дотепер</span>
+        </div>
+        <ul>
+          <li>Займаюсь перекладом фактур і особових рахунків на німецьку, польську та англійську мову з української, та навпаки.</li>
+          <li>Виконую функцію усного перекладача та письмового для співпраці фірми з іноземними компаніями.</li>
+        </ul>
+      </div>
+      
+      <div class="experience-item">
+        <div class="item-header">
+          <span class="item-title">Просування соціальних мереж кафедри в КНУТД</span>
+          <span class="item-date">10.2023 - 9.2024</span>
+        </div>
+        <p>Займаюсь просуванням та веденням соціальних мереж кафедри. Залучаюсь до зйомки та написання сценарію у відео-роликах. Також веду інстаграм та телеграм канал факультету.</p>
+        <p><a href="https://www.tiktok.com/@fiit_knutd" target="_blank">TikTok канал кафедри</a></p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2>Освіта</h2>
+      <div class="education-item">
+        <div class="item-header">
+          <span class="item-title">Комп'ютерні науки в Київський національний університет технологій та дизайну</span>
+          <span class="item-date">2023 - дотепер</span>
+        </div>
+        <p>Бакалаврська програма</p>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2>Додаткові курси та тренінги</h2>
+      <div class="education-item">
+        <div class="item-header">
+          <span class="item-title">Front-end Pro в Hillel IT School</span>
+          <span class="item-date">2023</span>
+        </div>
+        <p><a href="https://certificate.ithillel.ua/view/24714819" target="_blank">Сертифікат</a></p>
+      </div>
+      
+      <div class="education-item">
+        <div class="item-header">
+          <span class="item-title">English Upper в Hillel IT School</span>
+          <span class="item-date">2023</span>
+        </div>
+      </div>
+      
+      <div class="education-item">
+        <div class="item-header">
+          <span class="item-title">PHP Basic в Hillel IT School</span>
+          <span class="item-date">2024</span>
+        </div>
+        <p><a href="https://certificate.ithillel.ua/view/78378904" target="_blank">Сертифікат</a></p>
+      </div>
+      
+      <div class="education-item">
+        <div class="item-header">
+          <span class="item-title">Python Basic в Hillel IT School</span>
+          <span class="item-date">2024</span>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2>Мови</h2>
+      <div class="languages">
+        <div class="language">
+          <span>Українська</span>
+          <span class="language-level">Рідна</span>
+        </div>
+        <div class="language">
+          <span>Англійська</span>
+          <span class="language-level">C1</span>
+        </div>
+        <div class="language">
+          <span>Польська</span>
+          <span class="language-level">B2</span>
+        </div>
+        <div class="language">
+          <span>Німецька</span>
+          <span class="language-level">B1</span>
+        </div>
+        <div class="language">
+          <span>Китайська</span>
+          <span class="language-level">A2</span>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2>Хобі та інтереси</h2>
+      <div class="hobbies">
+        <div class="hobby">
+          <div class="hobby-icon">🗣️</div>
+          <p>Вивчення іноземних мов</p>
+        </div>
+        <div class="hobby">
+          <div class="hobby-icon">💃</div>
+          <p>Танці на каблуках (High Heels)</p>
+        </div>
+        <div class="hobby">
+          <div class="hobby-icon">📱</div>
+          <p>Ведення Instagram-сторінки</p>
+        </div>
+        <div class="hobby">
+          <div class="hobby-icon">📸</div>
+          <p>Фотографія</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Анастасія Бабич. Всі права захищені.</p>
+  </footer>
+</body>
+</html>
